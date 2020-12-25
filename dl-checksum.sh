@@ -2,11 +2,18 @@
 
 # Credit to https://github.com/andrewrothstein
 
+if ! [ -x "$(command -v yq)" ]; then
+  echo "yq is not installed" >&2
+  exit 1
+fi
+
 set -e
 DIR=/tmp
-APPNAME=flux
-MIRROR=https://github.com/fluxcd/flux2/releases/download
-VERSION=0.5.7
+APPNAME=$(yq r defaults/main.yaml bin_name)
+NAMESPACE=$(yq r defaults/main.yaml namespace)
+REPO=$(yq r defaults/main.yaml repo)
+MIRROR=https://github.com/${NAMESPACE}/${REPO}/releases/download
+VERSION=$(yq r defaults/main.yaml app_ver)
 
 dl() {
     local ver=$1
@@ -18,8 +25,7 @@ dl() {
     local url=$MIRROR/v$ver/$file
     local lfile=$DIR/$file
 
-    if [ ! -e $lfile ];
-    then
+    if [ ! -e $lfile ]; then
         wget -q -O $lfile $url
     fi
 
@@ -30,12 +36,12 @@ dl() {
 dl_ver() {
     local ver=$1
     printf "  '%s':\n" $ver
-    dl $ver darwin amd64
-    dl $ver linux amd64
-    dl $ver linux arm64
-    dl $ver linux arm
-    dl $ver windows 386 zip
-    dl $ver windows amd64 zip
+    dl $ver Darwin x86_64
+    dl $ver Linux x86_64
+    dl $ver Linux arm64
+    dl $ver Linux armv7
+    dl $ver Linux armv6
+    dl $ver Windows x86_64
 }
 
 dl_ver ${1:-$VERSION}

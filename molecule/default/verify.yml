@@ -10,12 +10,12 @@
     - ../../vars/main.yaml
 
   tasks:
-    - name: Check Flux version.
-      command: "{{ app_install_link }} --version"
+    - name: Check {{ bin_name }} version.
+      command: "{{ app_install_link }} {{ verify_arg }}"
       changed_when: false
       register: app_verify_version
 
-    - name: Verify '{{ bin_name }} version is {{ app_ver }}.
+    - name: Verify {{ bin_name }} version is {{ app_ver }}.
       assert:
         that:
           - app_ver in app_verify_version.stdout
