@@ -3,6 +3,7 @@
 [![CI](https://github.com/nicholaswilde/ansible-role-helm-docs/workflows/CI/badge.svg?event=push)](https://github.com/nicholaswilde/ansible-role-helm-docs/actions?query=workflow%3ACI)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![GitHub](https://img.shields.io/github/license/nicholaswilde/ansible-role-helm-docs)](https://github.com/nicholaswilde/ansible-role-helm-docs/blob/main/LICENSE)
+[![Ansible Role](https://img.shields.io/ansible/role/d/52480)](https://galaxy.ansible.com/nicholaswilde/helm_docs)
 
 This role installs the [helm-docs](https://github.com/norwoodj/helm-docs/) binary on any supported host.
 
