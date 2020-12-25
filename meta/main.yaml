@@ -4,7 +4,7 @@ dependencies:
     version: v1.1.5
 
 galaxy_info:
-  role_name: "helm-docs"
+  role_name: helm_docs
   author: Nicholas Wilde
   description: Install helm-docs role
   license: Apache-2.0

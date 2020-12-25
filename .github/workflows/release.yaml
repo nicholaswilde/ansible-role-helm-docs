@@ -13,7 +13,7 @@ name: Release
 
 defaults:
   run:
-    working-directory: 'nicholaswilde.helm-docs'
+    working-directory: 'nicholaswilde.helm_docs'
 
 jobs:
 
@@ -24,7 +24,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'nicholaswilde.helm-docs'
+          path: 'nicholaswilde.helm_docs'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2

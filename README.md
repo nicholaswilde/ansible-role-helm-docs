@@ -1,4 +1,4 @@
-# Ansible Role: helm-docs
+# Ansible Role: helm_docs
 
 [![CI](https://github.com/nicholaswilde/ansible-role-helm-docs/workflows/CI/badge.svg?event=push)](https://github.com/nicholaswilde/ansible-role-helm-docs/actions?query=workflow%3ACI)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
@@ -36,16 +36,16 @@ Install dependencies
 
     - hosts: all
       roles:
-        - role: nicholaswilde.helm-docs
+        - role: nicholaswilde.helm_docs
 
 ## Testing
 
-If you want to use [moleculte](https://molecule.readthedocs.io/en/latest/installation.html) to test, be sure to check out the repo in a folder titled `nicholaswilde.helm-docs`
+If you want to use [moleculte](https://molecule.readthedocs.io/en/latest/installation.html) to test, be sure to check out the repo in a folder titled `nicholaswilde.helm_docs`
 
 ```
 # Checkout
-$ git clone https://github.com/nicholaswilde/ansible-role-helm-docs.git nicholaswilde.helm-docs
-$ cd nicholaswilde.helm-docs
+$ git clone https://github.com/nicholaswilde/ansible-role-helm-docs.git nicholaswilde.helm_docs
+$ cd nicholaswilde.helm_docs
 # Test
 $ molecule test
 # Converge
