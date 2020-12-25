@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/nicholaswilde/ansible-role-helm-docs/compare/v1.0.2...v1.0.3) (2020-12-25)
+
+
+### Bug Fixes
+
+* renamed role from helm-docs to helm_docs ([588d764](https://github.com/nicholaswilde/ansible-role-helm-docs/commit/588d7646945d5eddabfb6e07a1905d0e7b4a6e8e))
+
 ### [1.0.2](https://github.com/nicholaswilde/ansible-role-helm-docs/compare/v1.0.1...v1.0.2) (2020-12-25)
 
 ### 1.0.1 (2020-12-25)
